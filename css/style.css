@@ -12,13 +12,21 @@ body{
     height: 100vh;
     background-position: center;
     animation: troca-fundo 75s infinite;
+    
+
 }
 
 @keyframes troca-fundo {
-    0%   { background-image: url("../images/img1.webp"); }
-    33.33% { background-image: url("../images/img2.jpg"); }
-    66.66% { background-image: url("../images/img3.jpeg"); }
-    100%  { background-image: url("../images/img4.jpeg"); }
+    0%   { background-image: url("https://i.pinimg.com/736x/bd/20/17/bd2017763f932838f3f7764fde9fce18.jpg"); }
+    33.33% { background-image: url("https://i.pinimg.com/1200x/a4/73/25/a473254af647f8a75a4d61175d51fb4d.jpg"); }
+    66.66% { background-image: url("https://i.pinimg.com/1200x/b1/53/4a/b1534a034562f8a6a441bf4c3b8d9f8f.jpg"); }
+    100%  { background-image: url("https://i.pinimg.com/736x/69/ab/ed/69abed2a605add63f337770b662ae00b.jpg"); }
+  }
+  @keyframes troca-obstaculo {
+    0%   {image: url("../images/planta1-removebg-preview.png"); }
+    33.33% {image: url("../images/cacto1-removebg-preview.png"); }
+    66.66% {image: url("../images/neve1-removebg-preview.png"); }
+    100%  { image: url("../images/pedra1-removebg-preview.png"); }
   }
 
 .game-board {
@@ -33,6 +41,7 @@ body{
 
 
 .pipe {
+    animation: troca-obstaculo 75s infinite;
     position: absolute;
     bottom: 0;
     width: 80px;
