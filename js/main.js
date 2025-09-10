@@ -16,13 +16,14 @@ const imagens = [
 ];
 
 const fundos = [
-    "url('https://i.pinimg.com/1200x/03/7a/86/037a865c5bde34d89b53339fcc4fd7db.jpg')",
-    "url('https://i.pinimg.com/736x/bd/20/17/bd2017763f932838f3f7764fde9fce18.jpg')",
-    "url('https://i.pinimg.com/1200x/a4/73/25/a473254af647f8a75a4d61175d51fb4d.jpg')",
-    "url('https://i.pinimg.com/1200x/b1/53/4a/b1534a034562f8a6a441bf4c3b8d9f8f.jpg')"
+    "url('images/tropical1.jpg')",
+    "url('images/deserto1.jpg')",
+    "url('images/polar2.jpg')",
+    "url('images/floresta1.jpg')"
 ];
 
-const cores = ['#FFFFFF', '#000000', '#000000', '#000000'];
+const cores = ['#FFFFFF', '#000000', '#000000', '#FFFFFF'];
+const sombras = ['2px 2px 4px #000000', '2px 2px 4px #FFFFFF', '2px 2px 4px #FFFFFF', '2px 2px 4px #000000'];
 
 const winScore = 1000;
 
@@ -53,6 +54,7 @@ function startGame() {
 
     document.body.style.backgroundImage = fundos[index];
     scoreElement.style.color = cores[index];
+    scoreElement.style.textShadow = sombras[index];
     imagemElemento.src = imagens[index];
     scoreElement.textContent = `Pontuação: 0`;
 
@@ -61,6 +63,7 @@ function startGame() {
         imagemElemento.src = imagens[index];
         document.body.style.backgroundImage = fundos[index];
         scoreElement.style.color = cores[index];
+        scoreElement.style.textShadow = sombras[index];
     }, 10000);
 
     const loop = setInterval(() => {
