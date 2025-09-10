@@ -1,33 +1,16 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    
+body {
     background-size: 100%;
     background-repeat: no-repeat;
     margin: 0;
     height: 100vh;
     background-position: center;
-    animation: troca-fundo 50s infinite;
-    
-
 }
-
-@keyframes troca-fundo {
-    0%   { background-image: url("https://i.pinimg.com/736x/bd/20/17/bd2017763f932838f3f7764fde9fce18.jpg"); }
-    33.33% { background-image: url("https://i.pinimg.com/1200x/a4/73/25/a473254af647f8a75a4d61175d51fb4d.jpg"); }
-    66.66% { background-image: url("https://i.pinimg.com/1200x/b1/53/4a/b1534a034562f8a6a441bf4c3b8d9f8f.jpg"); }
-    100%  { background-image: url("https://i.pinimg.com/736x/69/ab/ed/69abed2a605add63f337770b662ae00b.jpg"); }
-  }
-  @keyframes troca-obstaculo {
-    0%   {image: url("../images/planta1-removebg-preview.png"); }
-    33.33% {image: url("../images/cacto1-removebg-preview.png"); }
-    66.66% {image: url("../images/neve1-removebg-preview.png"); }
-    100%  { image: url("../images/pedra1-removebg-preview.png"); }
-  }
 
 .game-board {
         width: 100%;
@@ -38,9 +21,16 @@ body{
         
 }
 
+.score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
 
 .pipe {
-    animation: troca-obstaculo 85s infinite;
     position: absolute;
     bottom: 0;
     width: 150px;
@@ -65,6 +55,36 @@ body{
     width: 550px;
     animation: clouds-animation 10s infinite linear;
 }
+
+.botao-reiniciar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.botao-reiniciar button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.botao-reiniciar button:hover {
+    background-color: #45a049;
+}
+
+.botao-reiniciar a {
+    color: white;
+    text-decoration: none;
+}
+
 
 @keyframes pipe-animation {
     from{
