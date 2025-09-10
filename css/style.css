@@ -74,6 +74,10 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.botao-reiniciar {
+    top: 85%; /* Posição ajustada para ficar mais abaixo */
+}
+
 .botao-iniciar:hover, .botao-reiniciar:hover {
     background-color: #45a049;
 }

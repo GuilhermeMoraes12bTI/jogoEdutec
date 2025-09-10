@@ -17,9 +17,9 @@ const imagens = [
 
 const fundos = [
     "url('https://i.pinimg.com/1200x/03/7a/86/037a865c5bde34d89b53339fcc4fd7db.jpg')",
+    "url('https://i.pinimg.com/736x/bd/20/17/bd2017763f932838f3f7764fde9fce18.jpg')",
     "url('https://i.pinimg.com/1200x/a4/73/25/a473254af647f8a75a4d61175d51fb4d.jpg')",
-    "url('https://i.pinimg.com/1200x/b1/53/4a/b1534a034562f8a6a441bf4c3b8d9f8f.jpg')",
-    "url('https://i.pinimg.com/736x/69/ab/ed/69abed2a605add63f337770b662ae00b.jpg')"
+    "url('https://i.pinimg.com/1200x/b1/53/4a/b1534a034562f8a6a441bf4c3b8d9f8f.jpg')"
 ];
 
 const cores = ['#FFFFFF', '#000000', '#000000', '#000000'];
@@ -94,14 +94,16 @@ function startGame() {
             pipe.style.display = 'none';
             nuvem.style.display = 'none';
 
-            const jogadorPosition = +window.getComputedStyle(jogador).bottom.replace('px', '');
             jogador.style.animation = 'none';
-            jogador.style.bottom = `${jogadorPosition}px`;
-            
+
             jogador.src = './images/imagemVence.gif';
-            jogador.style.width = '250px';
-            jogador.style.marginLeft = '-50px';
-            
+            jogador.style.width = 'auto';
+            jogador.style.height = '400px'; 
+            jogador.style.bottom = '50px'; 
+            jogador.style.left = '50%'; 
+            jogador.style.transform = 'translateX(-50%)'; 
+            jogador.style.marginLeft = '0';
+
             restartButton.style.display = 'block';
         }
     }, 100);
