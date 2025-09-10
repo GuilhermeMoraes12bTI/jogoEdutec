@@ -14,7 +14,7 @@ const imagens = [
   setInterval(() => {
     index = (index + 1) % imagens.length; // Vai para a próxima imagem em loop
     imagemElemento.src = imagens[index];
-  }, 5000); // 3000 milissegundos = 3 segundos
+  }, 10000); // 3000 milissegundos = 3 segundos
 
 
 
@@ -55,6 +55,8 @@ const loop = setInterval(() =>  {
         jogador.style.width = '75px'
         jogador.style.marginLeft = '50px';  
         clearInterval(loop);
+
+        
     }
 }, 10);
 
